@@ -16,8 +16,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUO-vm-ivF">
+                                <rect key="frame" x="49" y="291" width="50" height="50"/>
+                                <animations/>
+                                <state key="normal" backgroundImage="top_normal"/>
+                                <state key="highlighted" backgroundImage="top_highlighted"/>
+                                <connections>
+                                    <action selector="move:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jRs-eX-Vqr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SDk-QS-U6X">
+                                <rect key="frame" x="49" y="354" width="50" height="50"/>
+                                <animations/>
+                                <state key="normal" backgroundImage="bottom_normal"/>
+                                <state key="highlighted" backgroundImage="bottom_highlighted"/>
+                                <connections>
+                                    <action selector="move:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B9A-6a-c3B"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILB-vk-cN6">
+                                <rect key="frame" x="15" y="322" width="50" height="50"/>
+                                <animations/>
+                                <state key="normal" backgroundImage="left_normal"/>
+                                <state key="highlighted" backgroundImage="left_highlighted"/>
+                                <connections>
+                                    <action selector="move:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7IP-kV-AOx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="13" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lry-DI-jo6">
+                                <rect key="frame" x="82" y="322" width="50" height="50"/>
+                                <animations/>
+                                <state key="normal" backgroundImage="right_normal"/>
+                                <state key="highlighted" backgroundImage="right_highlighted"/>
+                                <connections>
+                                    <action selector="move:" destination="BYZ-38-t0r" eventType="touchUpInside" id="50b-ZD-9VS"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VRs-80-VC9">
-                                <rect key="frame" x="110" y="56" width="100" height="100"/>
+                                <rect key="frame" x="110" y="46" width="100" height="100"/>
                                 <animations/>
                                 <state key="normal" title="点我啊" backgroundImage="btn_01">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -29,6 +65,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="iconButton" destination="VRs-80-VC9" id="waG-QH-f9K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -36,7 +75,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bottom_highlighted" width="96" height="96"/>
+        <image name="bottom_normal" width="96" height="96"/>
         <image name="btn_01" width="100" height="100"/>
         <image name="btn_02" width="100" height="100"/>
+        <image name="left_highlighted" width="96" height="96"/>
+        <image name="left_normal" width="96" height="96"/>
+        <image name="right_highlighted" width="96" height="96"/>
+        <image name="right_normal" width="96" height="96"/>
+        <image name="top_highlighted" width="96" height="96"/>
+        <image name="top_normal" width="96" height="96"/>
     </resources>
 </document>
