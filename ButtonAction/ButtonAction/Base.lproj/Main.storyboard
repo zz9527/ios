@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
@@ -8,22 +8,24 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VRa-Yy-rNt"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Pe-lZ-NGK"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" id="VRs-80-VC9">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VRs-80-VC9">
                                 <rect key="frame" x="110" y="46" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <state key="normal" title="点我啊" backgroundImage="btn_01">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <state key="highlighted" title="摸我干嘛" backgroundImage="btn_02"/>
                             </button>
-                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="NUO-vm-ivF">
+                            <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUO-vm-ivF">
                                 <rect key="frame" x="49" y="291" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <state key="normal" backgroundImage="top_normal"/>
                                 <state key="highlighted" backgroundImage="top_highlighted"/>
@@ -31,9 +33,8 @@
                                     <action selector="move:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jRs-eX-Vqr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="SDk-QS-U6X">
+                            <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SDk-QS-U6X">
                                 <rect key="frame" x="49" y="354" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <state key="normal" backgroundImage="bottom_normal"/>
                                 <state key="highlighted" backgroundImage="bottom_highlighted"/>
@@ -41,9 +42,8 @@
                                     <action selector="move:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B9A-6a-c3B"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ILB-vk-cN6">
+                            <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILB-vk-cN6">
                                 <rect key="frame" x="15" y="322" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <state key="normal" backgroundImage="left_normal"/>
                                 <state key="highlighted" backgroundImage="left_highlighted"/>
@@ -51,9 +51,8 @@
                                     <action selector="move:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7IP-kV-AOx"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Lry-DI-jo6">
+                            <button opaque="NO" tag="13" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lry-DI-jo6">
                                 <rect key="frame" x="82" y="322" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <state key="normal" backgroundImage="right_normal"/>
                                 <state key="highlighted" backgroundImage="right_highlighted"/>
@@ -61,9 +60,8 @@
                                     <action selector="move:" destination="BYZ-38-t0r" eventType="touchUpInside" id="50b-ZD-9VS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zbN-Fr-eV0">
-                                <rect key="frame" x="196" y="321" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbN-Fr-eV0">
+                                <rect key="frame" x="196" y="291" width="50" height="50"/>
                                 <animations/>
                                 <state key="normal" backgroundImage="plus_normal"/>
                                 <state key="highlighted" backgroundImage="plus_highlighted"/>
@@ -71,14 +69,31 @@
                                     <action selector="zoom:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GgV-vE-8b3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qAx-D0-3zL">
-                                <rect key="frame" x="250" y="322" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAx-D0-3zL">
+                                <rect key="frame" x="250" y="292" width="50" height="50"/>
                                 <animations/>
                                 <state key="normal" backgroundImage="minus_normal"/>
                                 <state key="highlighted" backgroundImage="minus_highlighted"/>
                                 <connections>
                                     <action selector="zoom:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xaV-VY-ACe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ckU-9M-Vmo">
+                                <rect key="frame" x="250" y="350" width="50" height="50"/>
+                                <animations/>
+                                <state key="normal" backgroundImage="right_rotate_normal"/>
+                                <state key="highlighted" backgroundImage="right_rotate_highlighted"/>
+                                <connections>
+                                    <action selector="rate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y53-aR-zS4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYb-5b-mwu">
+                                <rect key="frame" x="192" y="350" width="50" height="50"/>
+                                <animations/>
+                                <state key="normal" backgroundImage="left_rotate_normal"/>
+                                <state key="highlighted" backgroundImage="left_rotate_highlighted"/>
+                                <connections>
+                                    <action selector="rate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8UV-f4-8hO"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -102,12 +117,16 @@
         <image name="btn_02" width="100" height="100"/>
         <image name="left_highlighted" width="96" height="96"/>
         <image name="left_normal" width="96" height="96"/>
+        <image name="left_rotate_highlighted" width="96" height="96"/>
+        <image name="left_rotate_normal" width="96" height="96"/>
         <image name="minus_highlighted" width="96" height="96"/>
         <image name="minus_normal" width="96" height="96"/>
         <image name="plus_highlighted" width="96" height="96"/>
         <image name="plus_normal" width="96" height="96"/>
         <image name="right_highlighted" width="96" height="96"/>
         <image name="right_normal" width="96" height="96"/>
+        <image name="right_rotate_highlighted" width="96" height="96"/>
+        <image name="right_rotate_normal" width="96" height="96"/>
         <image name="top_highlighted" width="96" height="96"/>
         <image name="top_normal" width="96" height="96"/>
     </resources>

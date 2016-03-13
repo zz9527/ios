@@ -9,7 +9,7 @@
 #import "ViewController.h"
 
 /*宏定义 移动偏移量*/
-#define kMovingDelta 20.f;
+#define kMovingDelta 20.0f;
 
 /*枚举上下左右*/
 typedef enum{
@@ -17,108 +17,135 @@ typedef enum{
     kMovingDirBottom,
     kMovingDirLeft,
     kMovingDirRight
-
+    
 } kMovingDir;
+
 
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *iconButton;
-
+@property(nonatomic,assign) CGFloat delta;
 @end
 
 @implementation ViewController
 
+/*悬转*/
+- (IBAction)rate:(UIButton *)sender {
+    
+    CGFloat angle=(sender.tag)?-M_PI_4:M_PI_4;
+    
+    self.iconButton.transform=CGAffineTransformRotate(self.iconButton.transform, angle);
+}
+
+/*缩放*/
 -(IBAction)zoom:(UIButton*)sender{
     
+    CGFloat scale=(sender.tag)?1.2:0.8;
+    
+    self.iconButton.transform=CGAffineTransformScale(self.iconButton.transform,scale, scale);
+    
     /*bounds缩放*/
-    CGRect bounds= self.iconButton.bounds;
-    if (sender.tag) {
-        NSLog(@"放大");
-        bounds.size.width+=20;
-        bounds.size.height+=20;
-    }
-    else
-    {
-        NSLog(@"缩小");
-        bounds.size.width-=20;
-        bounds.size.height-=20;
-    }
+    //    CGRect bounds= self.iconButton.bounds;
+    //    if (sender.tag) {
+    //        NSLog(@"放大");
+    //        bounds.size.width+=20;
+    //        bounds.size.height+=20;
+    //    }
+    //    else
+    //    {
+    //        NSLog(@"缩小");
+    //        bounds.size.width-=20;
+    //        bounds.size.height-=20;
+    //    }
     
     /*加入首尾动画*/
-    [UIView beginAnimations:nil context:nil];
-    [UIView setAnimationDuration:1];
+    //    [UIView beginAnimations:nil context:nil];
+    //    [UIView setAnimationDuration:1];
+    //
+    //    self.iconButton.bounds=bounds;
+    //
+    //    [UIView commitAnimations];
     
-    self.iconButton.bounds=bounds;
-    
-    [UIView commitAnimations];
-
     /*frame缩放*/
     /*
-    CGRect frame=self.iconButton.frame;
-    if (sender.tag) {
-        NSLog(@"放大");
-        frame.size.width+=20;
-        frame.size.height+=20;
-    }
-    else
-    {
-        NSLog(@"缩小");
-        frame.size.width-=20;
-        frame.size.height-=20;
-    }
+     CGRect frame=self.iconButton.frame;
+     if (sender.tag) {
+     NSLog(@"放大");
+     frame.size.width+=20;
+     frame.size.height+=20;
+     }
+     else
+     {
+     NSLog(@"缩小");
+     frame.size.width-=20;
+     frame.size.height-=20;
+     }
+     
+     self.iconButton.frame=frame;
+     */
     
-    self.iconButton.frame=frame;
-    */
-
 }
 
 
 /*按钮移动*/
 - (IBAction)move:(UIButton *)sender {
     
-    /*center实现按钮移动*/
-    CGPoint center=self.iconButton.center;
-    switch (sender.tag) {
-        case kMovingDirTop://向上移动
-            center.y-=kMovingDelta;
-            break;
-        case kMovingDirBottom://向下移动
-            center.y+=kMovingDelta;
-            break;
-        case kMovingDirLeft://向左移动
-            center.x-=kMovingDelta;
-            break;
-        case kMovingDirRight://向右移动
-            center.x+=kMovingDelta;
-            break;
+    CGFloat dx=0,dy=0;
+    self.delta=kMovingDelta;
+    
+    if (sender.tag==kMovingDirTop||sender.tag==kMovingDirBottom) {
+        dy=(sender.tag==kMovingDirTop)?-self.delta: self.delta;
     }
+    
+    if (sender.tag==kMovingDirLeft||sender.tag==kMovingDirRight) {
+        dx=(sender.tag==kMovingDirLeft)?-self.delta : self.delta;
+    }
+    self.iconButton.transform=CGAffineTransformTranslate(self.iconButton.transform, dx , dy);
+    
+    
+    /*center实现按钮移动*/
+    //    CGPoint center=self.iconButton.center;
+    //    switch (sender.tag) {
+    //        case kMovingDirTop://向上移动
+    //            center.y-=kMovingDelta;
+    //            break;
+    //        case kMovingDirBottom://向下移动
+    //            center.y+=kMovingDelta;
+    //            break;
+    //        case kMovingDirLeft://向左移动
+    //            center.x-=kMovingDelta;
+    //            break;
+    //        case kMovingDirRight://向右移动
+    //            center.x+=kMovingDelta;
+    //            break;
+    //    }
     
     /*首尾动画*/
-    [UIView beginAnimations:nil context:nil];
-    [UIView setAnimationDuration:1];
-    
-    self.iconButton.center=center;
-    [UIView commitAnimations];
+    //    [UIView beginAnimations:nil context:nil];
+    //    [UIView setAnimationDuration:1];
+    //
+    //    self.iconButton.center=center;
+    //    [UIView commitAnimations];
     /*
      
-    CGRect frame=self.iconButton.frame;
-    switch (sender.tag) {
-        case kMovingDirTop://向上移动
-            frame.origin.y-=kMovingDelta;
-            break;
-        case kMovingDirBottom://向下移动
-            frame.origin.y+=kMovingDelta;
-            break;
-        case kMovingDirLeft://向左移动
-            frame.origin.x-=kMovingDelta;
-            break;
-        case kMovingDirRight://向右移动
-            frame.origin.x+=kMovingDelta;
-            break;
-    }
-    self.iconButton.frame=frame;
+     CGRect frame=self.iconButton.frame;
+     switch (sender.tag) {
+     case kMovingDirTop://向上移动
+     frame.origin.y-=kMovingDelta;
+     break;
+     case kMovingDirBottom://向下移动
+     frame.origin.y+=kMovingDelta;
+     break;
+     case kMovingDirLeft://向左移动
+     frame.origin.x-=kMovingDelta;
+     break;
+     case kMovingDirRight://向右移动
+     frame.origin.x+=kMovingDelta;
+     break;
+     }
+     self.iconButton.frame=frame;
      
-    */
+     */
     
 }
 
