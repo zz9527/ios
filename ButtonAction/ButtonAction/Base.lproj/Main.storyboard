@@ -24,7 +24,7 @@
                                 </state>
                                 <state key="highlighted" title="摸我干嘛" backgroundImage="btn_02"/>
                             </button>
-                            <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUO-vm-ivF">
+                            <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUO-vm-ivF" userLabel="Button 上">
                                 <rect key="frame" x="49" y="291" width="50" height="50"/>
                                 <animations/>
                                 <state key="normal" backgroundImage="top_normal"/>
@@ -33,7 +33,7 @@
                                     <action selector="move:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jRs-eX-Vqr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SDk-QS-U6X">
+                            <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SDk-QS-U6X" userLabel="Button 下">
                                 <rect key="frame" x="49" y="354" width="50" height="50"/>
                                 <animations/>
                                 <state key="normal" backgroundImage="bottom_normal"/>
@@ -42,7 +42,7 @@
                                     <action selector="move:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B9A-6a-c3B"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILB-vk-cN6">
+                            <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILB-vk-cN6" userLabel="Button 左">
                                 <rect key="frame" x="15" y="322" width="50" height="50"/>
                                 <animations/>
                                 <state key="normal" backgroundImage="left_normal"/>
@@ -51,7 +51,7 @@
                                     <action selector="move:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7IP-kV-AOx"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="13" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lry-DI-jo6">
+                            <button opaque="NO" tag="13" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lry-DI-jo6" userLabel="Button 右">
                                 <rect key="frame" x="82" y="322" width="50" height="50"/>
                                 <animations/>
                                 <state key="normal" backgroundImage="right_normal"/>
@@ -60,7 +60,7 @@
                                     <action selector="move:" destination="BYZ-38-t0r" eventType="touchUpInside" id="50b-ZD-9VS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbN-Fr-eV0">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbN-Fr-eV0" userLabel="Button 放大">
                                 <rect key="frame" x="196" y="291" width="50" height="50"/>
                                 <animations/>
                                 <state key="normal" backgroundImage="plus_normal"/>
@@ -69,7 +69,7 @@
                                     <action selector="zoom:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GgV-vE-8b3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAx-D0-3zL">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAx-D0-3zL" userLabel="Button 缩小">
                                 <rect key="frame" x="250" y="292" width="50" height="50"/>
                                 <animations/>
                                 <state key="normal" backgroundImage="minus_normal"/>
@@ -78,7 +78,7 @@
                                     <action selector="zoom:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xaV-VY-ACe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ckU-9M-Vmo">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ckU-9M-Vmo" userLabel="Button 旋转右">
                                 <rect key="frame" x="250" y="350" width="50" height="50"/>
                                 <animations/>
                                 <state key="normal" backgroundImage="right_rotate_normal"/>
@@ -87,7 +87,7 @@
                                     <action selector="rate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y53-aR-zS4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYb-5b-mwu">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYb-5b-mwu" userLabel="Button 旋转左">
                                 <rect key="frame" x="192" y="350" width="50" height="50"/>
                                 <animations/>
                                 <state key="normal" backgroundImage="left_rotate_normal"/>
